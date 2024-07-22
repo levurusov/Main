@@ -7,6 +7,7 @@ RUN \
   git \
   gcc-mips-linux-gnu \
   autoconf \
+  pkg-config \
   libtool \
   ftp-upload \
   wget \

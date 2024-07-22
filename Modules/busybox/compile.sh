@@ -25,6 +25,14 @@ sed -i 's/CONFIG_TRACEROUTE6=y/CONFIG_TRACEROUTE6=n/' .config
 sed -i 's/CONFIG_TRACEROUTE_VERBOSE=y/CONFIG_TRACEROUTE_VERBOSE=n/' .config
 sed -i 's/CONFIG_TRACEROUTE_USE_ICMP=y/CONFIG_TRACEROUTE_USE_ICMP=n/' .config
 sed -i 's/# CONFIG_FLASH_ERASEALL is not set/CONFIG_FLASH_ERASEALL=y/' .config
+sed -i 's/CONFIG_SHA1_HWACCEL=y/# CONFIG_SHA1_HWACCEL is not set/' .config
+sed -i 's/CONFIG_SHA256_HWACCEL=y/# CONFIG_SHA256_HWACCEL is not set/' .config
+sed -i 's/CONFIG_FEATURE_IP_LINK_CAN=y/# CONFIG_FEATURE_IP_LINK_CAN is not set/' .config
+
+
+sed -i 's/CLOCK_BOOTTIME/CLOCK_MONOTONIC/' miscutils/seedrng.c
+
+
 make CROSS_COMPILE=$CROSS_COMPILE
 
 cp busybox ${INSTALLDIR}/bin

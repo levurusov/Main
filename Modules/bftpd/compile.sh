@@ -6,9 +6,9 @@ set -e # fail out if any step fails
 
 if [ ! -d bftpd ]
 then
-  wget https://iweb.dl.sourceforge.net/project/bftpd/bftpd/bftpd-5.4/bftpd-5.4.tar.gz
+#  wget https://iweb.dl.sourceforge.net/project/bftpd/bftpd/bftpd-5.4/bftpd-5.4.tar.gz
   tar xvfz bftpd-5.4.tar.gz
-  rm bftpd-5.4.tar.gz
+#  rm bftpd-5.4.tar.gz
 cat << EOF > bftpd/mypaths.h
 #define PATH_BFTPD_CONF "/system/sdcard/config/bftpd.conf"
 #ifdef PREFIX
